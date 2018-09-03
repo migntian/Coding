@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+// class Time
+// {
+// public:
+//     Time(const Time& t)
+//     {
+//         cout<<"Time(const Time&t)"<<endl;
+//         _hour = t._hour;
+//         _minute = t._minute;
+//         _second = t._second;
+//     }
+// private:
+//     int _hout;
+//     int _minute;
+//     int _second;
+// };
+// class Date
+// {
+// public:
+//     Date(int year,int month,int day,const Time&t)
+//         :_year(year)
+//         ,_month(month)
+//         ,_day(day)
+//         ,_t(t)
+//     {
+//         cout<<"Date()初始化列表"<<endl;
+//     }
+// private:
+//     int _year;
+//     int _month;
+//     int _day;
+// };
+
+///class Test {
+///public:
+///    Test(int a = 5,int b = 5)
+///        //:_a(a)
+///        //,_b(b)
+///    {
+///        _a = a;
+///        _b = b;
+///    }
+///private:
+///    //const int _a;
+///    //int &_a;
+///    int _a;
+///    int _b;
+///};
+
+class A {
+public:
+    A(){
+    }
+private:
+    int _a;
+};
+
+class B : public A {
+public:
+    B(int a, int b) 
+        :A(a)
+         ,_b(b)
+    {
+    }
+private:
+    int _b;
+};
+
+int main()
+{
+    B(1,2);
+
+    return 0;
+}
